@@ -1,0 +1,96 @@
+/** Jeff Palmer **/
+
+.p {
+  border: 8px solid;
+  border-color: green;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  font-family: Verdana;
+}
+.nav-tab {
+  background-color: white;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 8px solid;
+  border-style: ridge;
+  border-color: black;
+}
+.nav-tab:hover {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgreen;
+}
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  font-family: Verdana;
+  font-weight: bold;
+  border: 12px solid;
+  border-style: ridge;
+  border-color: black;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2 {
+  text-align: center;
+  font-size: 35px;
+  font-family: Verdana;
+  color: black;
+  font-weight: bold;
+}
+h3 {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+body {
+  text-align: center;
+  background-color: deepskyblue;
+}
+.lbl {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 8px solid;
+  border-style: ridge;
+  border-color: black;
+  background-color: lightcyan;
+}
+.th1 {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+.tb1 {
+  margin-left: auto;
+  margin-right: auto;
+  border: 8px solid;
+  border-style: ridge;
+  border-color: black;
+  background-color: lightcyan;
+}
+.tb2 {
+  border: 12px solid;
+  border-style: ridge;
+  border-color: black;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+span.hidden-message{
+  opacity: 0.0;
+}
+span.shown-message{
+  opacity: 1.0;
+}

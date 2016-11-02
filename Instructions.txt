@@ -1,0 +1,19 @@
+Your task for this project is to create an interactive (pseudo) "intelligence test" that has similar types of questions. It should meet the following functional requirements:
+
+    At least 3 questions, each on its own page
+    Each question should have at least 5 examples of two input values and the resulting outcome in the following format: A,B -> C. For instance, in the above image, the first example should read: 7,3 -> 41021
+    Each question should then have an incomplete example to test the user's knowledge with the format: A,B -> followed by a text input box
+    When the user enters (or changes) their answer in the input box, there should be an automatic (no button press) check that says if the answer provided is correct or incorrect
+    Similarly, if the user enters something that isn't the valid type (such as typing in words when numbers are expected), the automatic check should say what the expected input should be (e.g. "The answer must be a number, please try again!")
+    Question input values (ie. A,B) and output (ie. C) may be either numbers or words, or some combination of both!
+    After all questions have been answered, there should be a page that gives results by the percentage of questions answered correctly.
+
+The technical requirements are:
+
+    Each question should have its own HTML page and all HTML should validate without errors/warnings (using the tool available in resources)
+    All pages should have a cohesive, appealing visual design and layout that DOESN'T use default color, background, nor font
+    HTML, CSS, and JS code should each be organized appropriately in their own external files
+    All HTML, CSS, and JS should be easy to read and follow good practices taught in class.
+    The "start" of the intelligence test should be in a file called index.html
+    Your full name should be put in comments in all files
+    You should post your project to your personal GitHub account as a public repository. In addition, you should make it available as a GitHub Pages project page:
