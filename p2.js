@@ -2,6 +2,14 @@
 Jeff Palmer
 Project 2
 **/
+var x = 0; //used to keep count of cookie value
+var count = "count"; //name of cookie
+
+function results() {
+var cookie = getCookie(count);
+document.getElementById("pr").innerHTML="You got " + cookie + " out of 3 correct!";
+setCookie(count, x, 0);
+}
 
 function questionTwo() {
 var input2 = document.getElementById("answer2").value;
@@ -24,6 +32,9 @@ var input2 = document.getElementById("answer2").value;
           document.getElementById("answerGroup2").classList.add("has-success");
           document.getElementById("answerError2").innerHTML="Correct Answer!";
           document.getElementById("answerError2").classList.add("shown-message");
+          var x = getCookie(count);
+          x++;
+          setCookie(count, x, 1);
         }
     }
 }
@@ -49,12 +60,11 @@ var input3 = document.getElementById("answer3").value;
           document.getElementById("answerGroup3").classList.add("has-success");
           document.getElementById("answerError3").innerHTML="Correct Answer!";
           document.getElementById("answerError3").classList.add("shown-message");
+          var x = getCookie(count);
+          x++;
+          setCookie(count, x, 1);
         }
     }
-}
-
-function results() {
-document.getElementById("pr").innerHTML="You got x answers correct!";
 }
 
 function myFunction() {
@@ -72,12 +82,38 @@ function myFunction() {
         document.getElementById("answerGroup1").classList.add("has-error");
         document.getElementById("answerError1").classList.add("shown-message");
         document.getElementById("answerError1").innerHTML="Wrong Answer.";
+        setCookie(count, 0, 1);
         if (document.getElementById("answer1").value == 6252500) {
           //correct answer
           document.getElementById("answerGroup1").classList.remove("has-error");
           document.getElementById("answerGroup1").classList.add("has-success");
           document.getElementById("answerError1").innerHTML="Correct Answer!";
           document.getElementById("answerError1").classList.add("shown-message");
+          var x = 1;
+          setCookie(count, x, 1);
         }
     }
+  }
+
+  //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
+  function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
+  function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+          }
+      }
+      return "";
   }
